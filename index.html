@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <meta name="viewport" content="width=device-width">
+  <head>
+    <title>Practical Todos</title>
+    <link id="favicon" rel="icon" href="https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Ffavicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/style.css"> 
+  </head>
+  <body>
+    <div class="page">
+    
+      <h1>Todo List</h1>
+      
+      <div class="allButtons">
+        
+        <div class="button" id="toggleAllButton">
+          <button onclick="handlers.toggleAll()">Toggle All</button>
+        </div>
+
+        <div class="button" id="addButton">
+          <button id="addTodoBtn" onclick="handlers.addTodo()">Add</button>
+          <input id="addTodoTextInput" type="text" onkeypress="handlers.keyPress()" placeholder="List Item">
+        </div>
+
+        <div class="button" id="changeTodoButton">
+          <button onclick="handlers.changeTodo()">Change Todo</button>
+          <input id="changeTodoPositionInput" type="number" placeholder="List #">
+          <input id="changeTodoTextInput" type="text" placeholder="Change Item">
+        </div>
+
+        <div class="button" id="toggleCompletedButton">
+          <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+          <input id="toggleCompletedPositionInput" type="number" placeholder="List #">
+        </div>
+        
+      </div>
+      
+    </div>
+    <ul>
+    </ul>
+    <script src="/client.js"></script>
+  </body>
+</html>

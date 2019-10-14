@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .allButtons {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  body {
+    background-color: #fff;
+  }
+  
+  /* Mobile Styles */
+  @media only screen and (max-width: 450px) {
+
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 451px) and (max-width: 960px) {
+
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+
+  }
+  
+  /* Moves the add button on mobile. */
+  /* @media only screen and (mix-width: 461px) {
+    #addBtn {
+      display: block;
+      padding-left: 25em;
+      padding-top: 20em;
+      position: fixed;
+    }
+  } */
+  
+  /* Makes the buttons bigger on mobile */
+  @media only screen and (max-width: 460px) {
+    .page {
+      font-size: 1.5em;
+    }
+  }
+  
+  page {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    display: block;
+    font-family: sans-serif;
+    font-weight: 900;
+    color: #1c1c1c;
+    padding-bottom: 1em;
+  }
+  
+  p {
+    font-family: sans-serif;
+    font-size: 2em;
+  }
+  
+  button {
+    display: flex;
+    margin: .5em 0 .5em 1em;
+    border-radius: 1em;
+    border-width: .4em;
+    border: solid;
+    padding: .4em 1em;
+    background-color: #00bbff;
+    font-size: .9em;
+    box-shadow: -2px 1px 4px 0px #0000001c;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    text-shadow: -2px 2px 2px #00000026;
+  }
+  
+  button:active {
+    background: #e0e0e0;
+    border-color: #b8b8b80a;
+  }
+  
+  input {
+    background-color: #e5e5e5;
+    width: 7em;
+    margin-left: 1em;
+    border-radius: 1em;
+    padding: .2em;
+    border-width: 0px;
+    font-size: .9em;
+    color: #3a3a3a;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+  }
+  
+  input:focus {
+    width: 9em;
+  }
+  
+  /* Adds a small gap between input fields */
+  #changeTodoPositionInput {
+    margin-bottom: .3em;
+  }
+  
+  /* Adjusts the placeholder text in input fields */
+  ::placeholder {
+    font-size: .8em;
+    font-style: italic;
+    color: gray;
+    opacity: .7;
+    padding: .7em;
+  }
+  
+  #changeTodoBtn {
+    display: inline;
+  }
+  
+  .button {
+    margin: .5em;
+  }
+  
+  button.deleteButton {
+    display: inline;
+    font-size: .9em;
+    box-shadow: 0px 0px 4px 0px #00000030;
+  }
+  
+  /* Changes the look of list items that are added */
+  li {
+    font-size: 1.3em;
+    font-family: sans-serif;
+    text-transform: capitalize;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    #addTodoBtn {
+    position: fixed;
+    display: inline-block;
+    margin: 0 auto;
+    line-height: 0;
+    width: 17%;
+    height: 10%;
+    padding: .5% 0 .5% 0;
+    border-radius: 50%;
+    right: 2em;
+    bottom: 2em;
+    }
+  }
+  
+  
+  
