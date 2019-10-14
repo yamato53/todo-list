@@ -4,13 +4,28 @@
   box-sizing: border-box;
 }
 
-.allButtons {
-  display: inline-flex;
-  flex-wrap: wrap;
+*:focus, 
+textarea:focus, 
+input:focus{
+  outline: none;
 }
 
 body {
-  background-color: #fff;
+  background-color: #534B62;
+  font-size: 1.5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-wrap {
+  margin: 0 16px;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 700px;
+  padding: 10px;
+  background-color: #A499B3;
+  border-radius: 20px;
 }
 
 /* Mobile Styles */
@@ -27,57 +42,35 @@ body {
 @media only screen and (min-width: 961px) {
 }
 
-/* Moves the add button on mobile. */
-/* @media only screen and (mix-width: 461px) {
-  #addBtn {
-    display: block;
-    padding-left: 25em;
-    padding-top: 20em;
-    position: fixed;
-  }
-} */
 
-/* Makes the buttons bigger on mobile */
-@media only screen and (max-width: 460px) {
-  .page {
-    font-size: 1.5em;
-  }
-}
-
-page {
-  display: flex; 
-  flex-wrap: wrap;
-}
-
-h1, h2, h3 {
+h1, 
+h2, 
+h3,
+h4,
+h5,
+h6 {
   text-align: center;
   display: block;
-  font-family: sans-serif;
   font-weight: 900;
-  color: #1c1c1c;
+  color: #f3f3f3;
   padding-bottom: 1em;
 }
 
 p {
-  font-family: sans-serif;
   font-size: 2em;
 }
 
 button {
   display: flex;
-  margin: .5em 0 .5em 1em;
-  border-radius: 1em;
-  border-width: .4em;
-  border: solid;
+  margin: .5em 0;
+  border-radius: 20px;
+  border: none;
   padding: .4em 1em;
-  background-color: #00bbff;
-  font-size: .9em;
-  box-shadow: -2px 1px 4px 0px #0000001c;
-  border-color: transparent;
+  background-color: #534b62;
+  font-size: .8em;
   cursor: pointer;
   color: white;
   font-weight: 600;
-  text-shadow: -2px 2px 2px #00000026;
 }
 
 button:active {
@@ -85,12 +78,16 @@ button:active {
   border-color: #b8b8b80a;
 }
 
+button:hover {
+  background-color: #5e5470;
+}
+
 input {
   background-color: #e5e5e5;
   width: 7em;
-  margin-left: 1em;
+  margin: .5em  auto;
   border-radius: 1em;
-  padding: .2em;
+  padding: 0 .5em;
   border-width: 0px;
   font-size: .9em;
   color: #3a3a3a;
@@ -98,8 +95,20 @@ input {
   transition: width .35s ease-in-out;
 }
 
-input:focus {
+.change-todo:focus,
+.toggle-todo:focus {
   width: 9em;
+
+}
+
+.add-item-container {
+  text-align: center;
+}
+
+.add-item-textfield {
+  width: 100%;
+  height: 60px;
+  border-radius: 6px;
 }
 
 /* Adds a small gap between input fields */
@@ -120,28 +129,30 @@ input:focus {
   display: inline;
 }
 
-.button {
-  margin: .5em;
-}
-
-button.deleteButton {
+.delete-button {
   display: inline;
-  font-size: .9em;
-  box-shadow: 0px 0px 4px 0px #00000030;
+  position: sticky;
+  left: 75%;
+  background-color: #4d7699;
+  color: #fff;
 }
 
 /* Changes the look of list items that are added */
-li {
-  font-size: 1.3em;
-  font-family: sans-serif;
-  text-transform: capitalize;
+ul {
+  list-style: none;
 }
 
-@media only screen and (max-width: 450px) {
+li {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+/* @media only screen and (max-width: 450px) {
   #addTodoBtn {
   position: fixed;
   display: inline-block;
   margin: 0 auto;
+  background-color: #408ec5;
   line-height: 0;
   width: 17%;
   height: 10%;
@@ -150,6 +161,6 @@ li {
   right: 2em;
   bottom: 2em;
   }
-}
+} */
 
 
