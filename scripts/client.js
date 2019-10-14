@@ -109,7 +109,7 @@ var view = {
   createDeleteButton: function() {
     var deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
-    deleteButton.className = 'deleteButton';
+    deleteButton.className = 'delete-button';
     deleteButton.idName = 'deleteBtn';
     return deleteButton;
   },
@@ -119,7 +119,7 @@ var view = {
 
   todosUl = addEventListener('click', function(event){  
     var elementClicked = event.target;
-    if (elementClicked.className === 'deleteButton') {
+    if (elementClicked.className === 'delete-button') {
       handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
     }
   });

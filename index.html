@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Practical Todos</title>
     <link id="favicon" rel="icon" href="https://cdn.gomix.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Ffavicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <meta name="viewport" content="width=device-width">
   </head>
+
   <body>
     <div class="page">
+
+      <header>
+          <h1 class="title">Todo List</h1>
+      </header>
       
-      <h1>Todo List</h1>
-      
-      <div class="allButtons">
-        
-        <div class="button" id="toggleAllButton">
-          <button onclick="handlers.toggleAll()">Toggle All</button>
-        </div>
+      <div class="page-wrap">
+        <div class="buttons-container">
 
-        <div class="button" id="addButton">
-          <button id="addTodoBtn" onclick="handlers.addTodo()">Add</button>
-          <input id="addTodoTextInput" type="text" onkeypress="handlers.keyPress()" placeholder="List Item">
-        </div>
+          <div class="container all-buttons add-todos-container">
+            <div class="add-item-container">
+                <input class="add-item-textfield" id="addTodoTextInput" type="text" onkeypress="handlers.keyPress()" placeholder="Add list item...">
+                <button class="add-btn" id="addTodoBtn" onclick="handlers.addTodo()">Add</button>
+            </div>
+          </div>
+          
+          <div class="container all-buttons change-toggle-container">
+            <div class="button change-btn" id="changeTodoButton">
+              <button onclick="handlers.changeTodo()">Change Todo</button>
+              <input class="change-todo" id="changeTodoPositionInput" type="number" placeholder="List #">
+              <input class="change-todo" id="changeTodoTextInput" type="text" placeholder="Change Item">
+            </div>
+            
+            <div class="button toggle-btn" id="toggleCompletedButton">
+              <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+              <input class="toggle-todo" id="toggleCompletedPositionInput" type="number" placeholder="List #">
+            </div>
+            
+            <div class="button toggle-all" id="toggleAllButton">
+              <button onclick="handlers.toggleAll()">Toggle All</button>
+            </div>
+          </div>
 
-        <div class="button" id="changeTodoButton">
-          <button onclick="handlers.changeTodo()">Change Todo</button>
-          <input id="changeTodoPositionInput" type="number" placeholder="List #">
-          <input id="changeTodoTextInput" type="text" placeholder="Change Item">
-        </div>
+          <div class="container list-container">
+              <ul class="list-items">
+              </ul>
+          </div>
 
-        <div class="button" id="toggleCompletedButton">
-          <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
-          <input id="toggleCompletedPositionInput" type="number" placeholder="List #">
         </div>
-        
       </div>
-      
     </div>
-    <ul>
-    </ul>
-    <script src="/scripts/client.js"></script>
+
+    <script src="./scripts/client.js"></script>
+
   </body>
 </html>
