@@ -1,14 +1,24 @@
 // Handles all of the array methods
 // Meat N' Taters of the program
+let i=0;
+if(i==0){
+  document.querySelector('.list-container').style.display='None';
+  i=1
+}
+
 
 var todoList = {
   todos: [],
   addTodo: function(todoText) {
+    if(todoText==''){
+       alert("please enter a valid todo");
+    }else{
+  document.querySelector('.list-container').style.display='block';
     this.todos.push({
       todoText: todoText,
       completed: false
     });
-  },
+  }},
   changeTodo: function(position, todoText) {
     this.todos[position].todoText = todoText;
   },
